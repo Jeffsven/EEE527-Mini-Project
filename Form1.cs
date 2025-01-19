@@ -31,12 +31,18 @@ namespace EEE527_Mini_Project
             nudMaxStationDist.Maximum = 10000;
             nudDuration.Maximum = 10000;
             nudBandwitdh.Maximum = 10000;
+            nudFramesize.Maximum = 10000;
+            nudStationIte.Maximum = 10000;
+
+            nudBandwitdh.DecimalPlaces = 5;
 
             nudNumStation.Value = 50;
             nudMinStationDist.Value = 10;
             nudMaxStationDist.Value = 100;
             nudDuration.Value = 10;
             nudBandwitdh.Value = 1;
+            nudFramesize.Value = 256;
+            nudStationIte.Value = 5;
 
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
         }
@@ -58,12 +64,14 @@ namespace EEE527_Mini_Project
 
                 Bitmap b = new Bitmap(filepath);
                 int NumStation = (int)nudNumStation.Value;
+                int numIte = (int)nudStationIte.Value;
                 int MinStationDist = (int)nudMinStationDist.Value;
                 int MaxStationDist = (int)nudMaxStationDist.Value;
-                int Bandwidth = (int)nudBandwitdh.Value;
+                double Bandwidth = (double)nudBandwitdh.Value;
                 int Duration = (int)nudDuration.Value;
+                int frameSize = (int)nudFramesize.Value;
 
-                ALOHA.Execute(b, NumStation, MinStationDist, MaxStationDist, Bandwidth, Duration, richTextBox1);
+                ALOHA.Execute(b, NumStation, numIte, MinStationDist, MaxStationDist, Bandwidth, Duration, frameSize, richTextBox1);
             }
             catch (Exception ex)
             {

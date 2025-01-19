@@ -43,6 +43,10 @@
             this.label6 = new System.Windows.Forms.Label();
             this.nudNumStation = new System.Windows.Forms.NumericUpDown();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.nudFramesize = new System.Windows.Forms.NumericUpDown();
+            this.label1 = new System.Windows.Forms.Label();
+            this.nudStationIte = new System.Windows.Forms.NumericUpDown();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnClear = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -55,6 +59,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudBandwitdh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudNumStation)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudFramesize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudStationIte)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
@@ -75,9 +81,9 @@
             this.richTextBox1.BackColor = System.Drawing.Color.Black;
             this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.richTextBox1.ForeColor = System.Drawing.Color.White;
-            this.richTextBox1.Location = new System.Drawing.Point(0, 253);
+            this.richTextBox1.Location = new System.Drawing.Point(0, 293);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(740, 384);
+            this.richTextBox1.Size = new System.Drawing.Size(740, 344);
             this.richTextBox1.TabIndex = 1;
             this.richTextBox1.Text = "";
             // 
@@ -103,7 +109,7 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Location = new System.Drawing.Point(3, 71);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(464, 148);
+            this.pictureBox1.Size = new System.Drawing.Size(464, 188);
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
@@ -189,6 +195,10 @@
             // 
             this.groupBox1.AutoSize = true;
             this.groupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.nudFramesize);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.nudStationIte);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.nudMinStationDist);
             this.groupBox1.Controls.Add(this.nudNumStation);
@@ -202,10 +212,44 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Right;
             this.groupBox1.Location = new System.Drawing.Point(470, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(270, 253);
+            this.groupBox1.Size = new System.Drawing.Size(270, 293);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "ALOHA Setting";
+            // 
+            // label7
+            // 
+            this.label7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label7.Location = new System.Drawing.Point(6, 182);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(124, 26);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Frame Size";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // nudFramesize
+            // 
+            this.nudFramesize.Location = new System.Drawing.Point(136, 182);
+            this.nudFramesize.Name = "nudFramesize";
+            this.nudFramesize.Size = new System.Drawing.Size(128, 26);
+            this.nudFramesize.TabIndex = 16;
+            // 
+            // label1
+            // 
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.Location = new System.Drawing.Point(6, 233);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(124, 26);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Station Iteration";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // nudStationIte
+            // 
+            this.nudStationIte.Location = new System.Drawing.Point(136, 233);
+            this.nudStationIte.Name = "nudStationIte";
+            this.nudStationIte.Size = new System.Drawing.Size(128, 26);
+            this.nudStationIte.TabIndex = 14;
             // 
             // flowLayoutPanel1
             // 
@@ -213,7 +257,7 @@
             this.flowLayoutPanel1.Controls.Add(this.btnSimulate);
             this.flowLayoutPanel1.Controls.Add(this.btnClear);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 222);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 262);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(470, 31);
             this.flowLayoutPanel1.TabIndex = 15;
@@ -235,7 +279,7 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(470, 222);
+            this.groupBox2.Size = new System.Drawing.Size(470, 262);
             this.groupBox2.TabIndex = 16;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Input";
@@ -281,6 +325,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudBandwitdh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudNumStation)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.nudFramesize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudStationIte)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -312,6 +358,10 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Label lblPicinfo;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.NumericUpDown nudStationIte;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.NumericUpDown nudFramesize;
     }
 }
 
